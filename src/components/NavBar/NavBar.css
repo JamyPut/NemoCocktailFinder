@@ -1,0 +1,6 @@
+#root{
+    --navbar-background-color: 238, 221, 191;
+}
+.navigation-bar{
+    color: var(--navbar-background-color)
+}
