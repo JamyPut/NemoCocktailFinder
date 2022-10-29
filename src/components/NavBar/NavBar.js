@@ -6,16 +6,15 @@ import {ReactComponent as CocktailLogo} from "../../assets/cocktail-logo.svg";
 function NavBar() {
     return(
         <nav className={"navigation-bar"}>
-            <div className={"navigation-container"}>
-                <ul className={"navigation-list"}>
+                <ul className={"navigation-container"}>
                     <li className={"navigation-item"}>
                         <NavLink to={"/"}>Home</NavLink>
                     </li>
                     <li className={"navigation-item"}>
                         <NavLink to={"/cocktails"}>Cocktails</NavLink>
                     </li>
-                    <li className={"navigation-item"}>
-                        <CocktailLogo/>
+                    <li className={"navigation-item"} id={"cocktail-logo"}>
+                        <CocktailLogo className={"cocktail-logo"}/>
                     </li>
                     <li className={"navigation-item"}>
                         <NavLink to={"/profile"}>Profiel</NavLink>
@@ -24,7 +23,6 @@ function NavBar() {
                         <NavLink to={"/faq"}>FAQ</NavLink>
                     </li>
                 </ul>
-            </div>
         </nav>
     );
 }
