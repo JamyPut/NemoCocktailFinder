@@ -1,10 +1,12 @@
 :root{
     --navbar-background-color: rgba(238, 221, 191, 0.25);
     --primary-text-color: #FFFFFF;
+    --navbar-button-color: rgba(0, 71, 85, 0.75);
 }
 .navigation-bar{
     background-color: var(--navbar-background-color);
     max-height: 90px;
+    position: relative;
 }
 
 .navigation-container{
@@ -19,7 +21,7 @@
     padding: 5px 25px 5px 25px;
     font-size: 24px;
     border-radius: 25px;
-    background: rgba(0, 71, 85, 0.75);
+    background: var(--navbar-button-color);
     color: var(--primary-text-color);
 }
 
@@ -29,4 +31,17 @@
 }
 #cocktail-logo{
     background: none;
+}
+
+.logreg-button{
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background: var(--navbar-button-color);
+    border-radius: 0 0 0 25px;
+    padding: 10px;
+    color: var(--primary-text-color);
+    font-size: 20px;
+    inline-size: 110px;
+    overflow-wrap: break-word;
 }

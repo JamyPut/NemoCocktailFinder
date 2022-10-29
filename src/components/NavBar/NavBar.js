@@ -5,7 +5,8 @@ import {ReactComponent as CocktailLogo} from "../../assets/cocktail-logo.svg";
 
 function NavBar() {
     return(
-        <nav className={"navigation-bar"}>
+        <>
+            <nav className={"navigation-bar"}>
                 <ul className={"navigation-container"}>
                     <li className={"navigation-item"}>
                         <NavLink to={"/"}>Home</NavLink>
@@ -23,7 +24,11 @@ function NavBar() {
                         <NavLink to={"/faq"}>FAQ</NavLink>
                     </li>
                 </ul>
-        </nav>
+            </nav>
+            <button className={"logreg-button"}>
+                <NavLink to={"/login"}>Login of registreer.</NavLink>
+            </button>
+        </>
     );
 }
 

@@ -11,4 +11,12 @@ a:visited{
 }
 .page-background{
     background-image: url("/src/assets/images/background-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
 }
