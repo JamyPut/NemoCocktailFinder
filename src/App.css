@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-
+:root{
+    --primary-text-color: #FFFFFF;
+}
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +10,7 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Roboto Condensed', sans-serif;
+    color: var(--primary-text-color)
 }
 
 a:visited{

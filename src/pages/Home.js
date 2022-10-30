@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Home.css"
+import {NavLink} from "react-router-dom";
 
 function Home() {
 
@@ -7,8 +8,11 @@ function Home() {
         <div className={"home-container"}>
         <h1 className={"nemo-title"}>
             Welkom bij Nemo.
-            Wij helpen je navigeren in een zee vol cocktails!
+            <p>Wij helpen je navigeren in een zee vol cocktails!</p>
         </h1>
+            <button className={"cocktail-button"}>
+               <NavLink to={"/cocktails"}>Alle cocktails</NavLink>
+            </button>
         </div>
     );
 }
