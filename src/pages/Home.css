@@ -6,7 +6,7 @@
     border: none;
     background: none;
 }
-.home-container{
+.intro-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,4 +52,12 @@
     justify-content: center;
     background-color: rgba(238, 221, 192, 0.6);
     margin-top: 50px;
+}
+.random-cocktail-item{
+    color: var(--primary-text-color);
+
+}
+.random-cocktail-item img{
+    width: 350px;
+    height: 350px;
 }
