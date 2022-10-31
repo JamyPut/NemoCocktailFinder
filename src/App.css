@@ -10,11 +10,10 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Roboto Condensed', sans-serif;
-    color: var(--primary-text-color)
 }
 
-a:visited{
-    color: inherit;
+a, a:visited{
+    color: var(--primary-text-color)
 }
 .page-background{
     background-image: url("/src/assets/images/background-image.jpg");

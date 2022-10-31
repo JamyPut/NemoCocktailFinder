@@ -1,7 +1,8 @@
 import React from 'react';
 import "./Home.css"
 import {NavLink} from "react-router-dom";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRotate } from '@fortawesome/free-solid-svg-icons'
 function Home() {
 
     return(
@@ -15,9 +16,11 @@ function Home() {
                     <NavLink to={"/cocktails"}>Alle cocktails</NavLink>
                 </button>
             </div>
-            <div className={"diagonal-separator"}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, aspernatur at consectetur ducimus earum eum eveniet facilis impedit incidunt iusto nam natus neque odit reprehenderit, tenetur ut veritatis. Accusantium, animi atque commodi earum itaque labore non obcaecati </p>
-                <button>verras me</button>
+            <div className={"randomize-container"}>
+                <button className={"randomize-icon"}>
+                    <FontAwesomeIcon icon={faRotate}></FontAwesomeIcon>
+                </button>
+                <button className={"randomize-text"}>verras me</button>
             </div>
         </>
     );
