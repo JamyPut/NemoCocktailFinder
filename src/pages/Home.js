@@ -41,10 +41,10 @@ function Home() {
                 </button>
             </div>
             <div className={"randomize-container"}>
-                <button className={"randomize-icon"}>
+                <button onClick={fetchCocktailHandler} className={"randomize-icon"}>
                     <FontAwesomeIcon icon={faRotate}></FontAwesomeIcon>
                 </button>
-                <button className={"randomize-text"}>verras me</button>
+                <button onClick={fetchCocktailHandler} className={"randomize-text"}>verras me</button>
             </div>
             <div>
                 {data.map((cocktail)=> (
