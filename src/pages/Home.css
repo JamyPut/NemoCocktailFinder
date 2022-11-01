@@ -38,6 +38,10 @@
     color: var(--random-button-color);
     font-size: var(--random-button-size);
 }
+.randomize-icon:hover{
+    color: teal;
+}
+
 .randomize-text{
     background-color: var(--random-button-color);
     border-radius: 25px;
@@ -60,4 +64,8 @@
 .random-cocktail-item img{
     width: 350px;
     height: 350px;
+}
+
+button:hover{
+    text-decoration: underline;
 }
