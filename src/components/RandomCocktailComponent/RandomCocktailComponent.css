@@ -19,20 +19,3 @@
     flex-direction: row;
     justify-content: center;
 }
-
-.random-cocktail-container img{
-    border-radius: 20px;
-}
-.cocktail-button{
-    background: var(--random-button-color);
-    color: var(--primary-text-color);
-    border-radius: 50px;
-    font-size: 24px;
-    text-align: center;
-    letter-spacing: 0.14em;
-    padding: 10px 20px 10px 20px;
-    margin-top: 15px;
-}
-.fa-cocktail{
-    padding: 0 5px 0 5px;
-}

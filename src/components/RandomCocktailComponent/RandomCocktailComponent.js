@@ -9,47 +9,26 @@ const randomCocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.ph
 
 function RandomCocktailComponent(){
 
-    // const [data,setData] = useState([]);
-    //
-    // const randomCocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
-    //
-    // const fetchCocktailHandler = useCallback(()=> {
-    //     axios
-    //         .get(randomCocktailUrl)
-    //         .then(res=> {
-    //             console.log(res.data)
-    //             setData(res.data.drinks);
-    //         }).catch(e=>console.log(e))
-    // },[]);
-    //
-    // useEffect(()=> {
-    //     fetchCocktailHandler();
-    // },[fetchCocktailHandler]);
-
-    const [randomCocktail, setRandomCocktail] = useState({});
-
-    async function fetchRandomCocktail(){
-        try {
-            const result = await axios.get(randomCocktailUrl);
-            console.log(result.data);
-            setRandomCocktail(result.data);
-                } catch(e) {
-                    console.error(e);
-                }
+    const [cocktailTitle, setCocktailTitle] = useState()
+    const fetchCocktail = () => {
+        axios.get(randomCocktailUrl)
+            .then(res => {
+                console.log(res.data)
+                setCocktailTitle(res.data.drinks[0])
+            })
     }
 
+    console.log(cocktailTitle)
     return(
         <section>
             <div className={"randomize-button-container"}>
-                <button onClick={fetchRandomCocktail} className={"randomize-icon"}>
+                <button className={"randomize-icon"}>
                     <FontAwesomeIcon icon={faRotate}></FontAwesomeIcon>
                 </button>
-                <button onClick={fetchRandomCocktail} className={"randomize-text"}>verras me</button>
+                <button onClick={fetchCocktail} className={"randomize-text"}>verras me</button>
+                <img src={cocktailTitle && cocktailTitle.strDrinkThumb} alt=""/>
+                <p>{cocktailTitle && cocktailTitle.strDrink}</p>
             </div>
-            <article>
-                {Object.keys(randomCocktail).length > 0 &&
-                <p>{randomCocktail.drinks.strDrink}</p>}
-            </article>
         </section>
     )
 }

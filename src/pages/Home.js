@@ -18,6 +18,8 @@ function Home() {
             </div>
             <div className={"random-section-container"}>
                 <RandomCocktailComponent/>
+                <RandomCocktailComponent/>
+                <RandomCocktailComponent/>
             </div>
         </>
     );
