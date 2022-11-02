@@ -1,0 +1,38 @@
+.randomize-icon{
+    color: var(--random-button-color);
+    font-size: var(--random-button-size);
+}
+.randomize-icon:hover{
+    color: teal;
+}
+
+.randomize-text{
+    background-color: var(--random-button-color);
+    border-radius: 25px;
+    padding: 3px 30px 3px 30px;
+    color: var(--primary-text-color);
+    font-size: var(--random-button-size);
+    margin: 15px 10px 15px 20px;
+}
+.randomize-button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.random-cocktail-container img{
+    border-radius: 20px;
+}
+.cocktail-button{
+    background: var(--random-button-color);
+    color: var(--primary-text-color);
+    border-radius: 50px;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0.14em;
+    padding: 10px 20px 10px 20px;
+    margin-top: 15px;
+}
+.fa-cocktail{
+    padding: 0 5px 0 5px;
+}
