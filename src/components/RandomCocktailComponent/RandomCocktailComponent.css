@@ -14,11 +14,13 @@
 .random-cocktail-button{
     margin: 10px 5px 10px 15px;
     font-size: var(--random-button-size);
+    align-self: center;
+    border-radius: 25px;
+    background-color: var(--primary-button-color);
+    padding: 5px 0 5px 0;
 }
 .random-cocktail-button a{
-    background-color: var(--primary-button-color);
-    border-radius: 25px;
-    padding: 3px 20px 3px 20px;
+    padding: 0 20px 0 20px;
 
 }
 .svg-inline--fa{
