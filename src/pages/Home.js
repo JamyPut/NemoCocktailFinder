@@ -1,4 +1,4 @@
-import React, {useState, useCallback, useEffect} from 'react';
+import React from 'react';
 import "./Home.css"
 import {NavLink} from "react-router-dom";
 import RandomCocktailComponent from "../components/RandomCocktailComponent/RandomCocktailComponent";
