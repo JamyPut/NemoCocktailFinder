@@ -1,9 +1,8 @@
 :root{
     --random-button-size: 20px;
-    --random-button-color: rgba(0, 71, 85, 0.75);
 }
 .randomize-button{
-    background-color: var(--random-button-color);
+    background-color: var(--primary-button-color);
     border-radius: 25px;
     padding: 3px 20px 3px 20px;
     color: var(--primary-text-color);
@@ -17,7 +16,7 @@
     font-size: var(--random-button-size);
 }
 .random-cocktail-button a{
-    background-color: var(--random-button-color);
+    background-color: var(--primary-button-color);
     border-radius: 25px;
     padding: 3px 20px 3px 20px;
 

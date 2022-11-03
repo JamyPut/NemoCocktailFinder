@@ -1,0 +1,6 @@
+.faq-page-styling{
+    background-color: var(--primary-background-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

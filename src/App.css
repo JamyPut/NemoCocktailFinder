@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 :root{
     --primary-text-color: #FFFFFF;
+    --primary-background-color: rgba(238, 221, 192, 0.6);
+    --primary-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --primary-button-color: rgba(0, 71, 85, 0.75);
 }
 *{
     margin: 0;
@@ -18,8 +21,15 @@ a, a:visited{
 a:hover{
     text-decoration: underline;
 }
+button{
+    box-shadow: var(--primary-box-shadow);
+}
 button:hover{
     text-decoration: underline;
+}
+hr.rounded {
+    border-top: 8px solid var(--primary-background-color);
+    border-radius: 5px;
 }
 .page-background{
     background-image: url("/src/assets/images/background-image.jpg");
