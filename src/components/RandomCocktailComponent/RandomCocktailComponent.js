@@ -1,4 +1,5 @@
-import React, {useCallback, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
+import {NavLink} from "react-router-dom";
 import "./RandomCocktailComponent.css"
 import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -9,25 +10,37 @@ const randomCocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.ph
 
 function RandomCocktailComponent(){
 
-    const [cocktailTitle, setCocktailTitle] = useState()
+    const [cocktailTitle, setCocktailTitle] = useState([])
     const fetchCocktail = () => {
         axios.get(randomCocktailUrl)
             .then(res => {
                 console.log(res.data)
                 setCocktailTitle(res.data.drinks[0])
             })
-    }
+            .catch(e => console.log(e))
+            }
 
-    console.log(cocktailTitle)
+
+    //        load cocktail upon page load.
+    useEffect(()=> {
+        fetchCocktail();
+    },[]);
+
+
     return(
         <section>
-            <div className={"randomize-button-container"}>
-                <button className={"randomize-icon"}>
+            <div className={"random-cocktail-section"}>
+                <button onClick={fetchCocktail} className={"randomize-button"}>
                     <FontAwesomeIcon icon={faRotate}></FontAwesomeIcon>
+                    verras me!
                 </button>
-                <button onClick={fetchCocktail} className={"randomize-text"}>verras me</button>
-                <img src={cocktailTitle && cocktailTitle.strDrinkThumb} alt=""/>
-                <p>{cocktailTitle && cocktailTitle.strDrink}</p>
+                <img src={cocktailTitle && cocktailTitle.strDrinkThumb} alt="cocktail-image"/>
+                <button className={"random-cocktail-button"}>
+                    <NavLink to={`/${cocktailTitle.idDrink}`}>
+                        <FontAwesomeIcon icon={faCocktail}></FontAwesomeIcon>
+                        {cocktailTitle && cocktailTitle.strDrink}
+                    </NavLink>
+                </button>
             </div>
         </section>
     )

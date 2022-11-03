@@ -1,21 +1,37 @@
-.randomize-icon{
-    color: var(--random-button-color);
-    font-size: var(--random-button-size);
+:root{
+    --random-button-size: 20px;
+    --random-button-color: rgba(0, 71, 85, 0.75);
 }
-.randomize-icon:hover{
-    color: teal;
-}
-
-.randomize-text{
+.randomize-button{
     background-color: var(--random-button-color);
     border-radius: 25px;
-    padding: 3px 30px 3px 30px;
+    padding: 3px 20px 3px 20px;
     color: var(--primary-text-color);
     font-size: var(--random-button-size);
-    margin: 15px 10px 15px 20px;
+    margin: 10px 5px 10px 15px;
+    align-self: center;
 }
-.randomize-button-container{
+
+.random-cocktail-button{
+    margin: 10px 5px 10px 15px;
+    font-size: var(--random-button-size);
+}
+.random-cocktail-button a{
+    background-color: var(--random-button-color);
+    border-radius: 25px;
+    padding: 3px 20px 3px 20px;
+
+}
+.svg-inline--fa{
+    padding: 0 8px 0 0;
+}
+.random-cocktail-section{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    margin: 25px;
+}
+.random-cocktail-section img{
+    width: 300px;
+    height: 300px;
 }
