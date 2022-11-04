@@ -32,7 +32,9 @@
     justify-content: center;
     margin: 25px;
 }
+
 .random-cocktail-section img{
     width: 300px;
     height: 300px;
+    box-shadow: var(--primary-box-shadow);
 }

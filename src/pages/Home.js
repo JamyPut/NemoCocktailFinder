@@ -8,10 +8,10 @@ function Home() {
     return(
         <>
             <div className={"intro-container"}>
-                <h1 className={"nemo-title"}>
-                    Welkom bij Nemo.
+                <div className={"nemo-title"}>
+                    <h1>Welkom bij Nemo.</h1>
                     <p>Wij helpen je navigeren in een zee vol cocktails!</p>
-                </h1>
+                </div>
                 <button className={"all-cocktails-button"}>
                     <NavLink to={"/cocktails"}>Alle cocktails</NavLink>
                 </button>

@@ -8,7 +8,7 @@ function FaQuestion(props){
     return(
         <article className={"question-article"}>
             <h2>{props.title}</h2>
-            <hr class={"rounded"}/>
+            <hr className={"rounded"}/>
             <p>{props.answer}</p>
         </article>
     )
