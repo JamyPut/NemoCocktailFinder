@@ -1,6 +1,5 @@
 import React from 'react';
 import "./faq.css"
-import {NavLink} from "react-router-dom";
 import RandomCocktailComponent from "../components/RandomCocktailComponent/RandomCocktailComponent";
 import FaQuestion from "../components/FaqSection/FaQuestion";
 
