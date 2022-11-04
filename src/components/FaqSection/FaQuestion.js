@@ -1,8 +1,5 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
 import "./FaQuestion.css"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faSquare} from "@fortawesome/free-solid-svg-icons";
 
 function FaQuestion(props){
     return(
