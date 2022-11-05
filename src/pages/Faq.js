@@ -1,5 +1,5 @@
 import React from 'react';
-import "./faq.css"
+import "./Faq.css"
 import RandomCocktailComponent from "../components/RandomCocktailComponent/RandomCocktailComponent";
 import FaQuestion from "../components/FaqSection/FaQuestion";
 
