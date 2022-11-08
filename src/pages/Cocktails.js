@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import "./Cocktails.css";
 import SingleCocktailComponent from "../components/SingleCocktailComponent/SingleCocktailComponent";
 import axios from "axios";
@@ -7,16 +7,19 @@ function Cocktails(){
 
     const [url, setUrl] = useState("")
     const [cocktails, setCocktails] = useState([])
+    const inputRef = useRef()
+
     const alcoholUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=alcoholic'
-    const nonAlcoholUrl = 'www.thecocktaildb.com/api/json/v1/1/search.php?f=a'
+
 
     const alcoholClick = () => {
         setUrl(alcoholUrl);
         console.log(url)
     };
-    const nonAlcoholClick = () => {
-        setUrl(nonAlcoholUrl);
-        console.log(url)
+
+    const getSearchInput = (event)=>{
+        // show the user input value to console
+        console.log(inputRef.current.value);
     };
 
 //make setState synchronous
@@ -43,7 +46,7 @@ function Cocktails(){
         <div className={"cocktail-page-styling"}>
             <section className={"filter-buttons"}>
                 <button onClick={alcoholClick}>met alcohol</button>
-                <button onClick={nonAlcoholClick}>zonder alcohol</button>
+                <input type="text" ref={inputRef} onChange={getSearchInput}/>
             </section>
             <section className='section'>
                 <h1 className='section-title'>Cocktails</h1>
