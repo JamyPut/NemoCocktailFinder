@@ -1,21 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./SingleCocktailComponent.css"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCircleInfo} from "@fortawesome/free-solid-svg-icons";
 
-const SingleCocktailComponent = ({ id, name, image, info, glass }) => {
+const SingleCocktailComponent = ({ id, name, image }) => {
     return (
-        <article className="single-cocktail">
-            <div className="single-cocktail-image">
+        <section className="single-cocktail">
                 <img src={image} alt={name} />
-            </div>
-            <div className="singe-cocktail-subtext">
                 <h3>{name}</h3>
-                <h4>{glass}</h4>
-                <p>{info}</p>
                 <Link to={`/${id}`} className="single-cocktail-button">
-                    Lees meer
+                    <FontAwesomeIcon icon={faCircleInfo}></FontAwesomeIcon>
                 </Link>
-            </div>
-        </article>
+        </section>
     );
 };
 
