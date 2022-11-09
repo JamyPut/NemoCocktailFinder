@@ -8,20 +8,36 @@ h1{
     background-color: var(--primary-background-color);
 }
 
-.filter-buttons{
+.no-results-styling{
+    margin: 300px;
+    padding: 50px;
+}
+
+.cocktail-filters{
     color: var(--primary-text-color);
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-top: 25px;
 }
-.filter-buttons button{
+.cocktail-filters button{
     color: var(--primary-text-color);
     margin: 25px;
     padding: 8px;
     font-size: 25px;
     background-color: var(--primary-button-color);
     border-radius: 25px 0 0 25px;
+}
+
+.cocktail-filters input{
+    border: solid 3px;
+    border-color: var(--primary-button-color);
+    background-color: var(--primary-background-color);
+    border-radius: 25px;
+    padding: 5px;
+    height: 30px;
+    align-self: center;
+    justify-self: center;
 }
 
 .cocktail-list{

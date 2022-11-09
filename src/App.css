@@ -27,6 +27,11 @@ button{
 button:hover{
     text-decoration: underline;
 }
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
 hr.rounded {
     border-top: 8px solid var(--primary-background-color);
     border-radius: 5px;
