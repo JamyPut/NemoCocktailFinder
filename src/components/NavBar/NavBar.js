@@ -26,7 +26,7 @@ function NavBar() {
                 </ul>
             </nav>
             <button className={"logreg-button"}>
-                <NavLink to={"/login"}>Login of registreer.</NavLink>
+                <NavLink to={"/login"}>Inloggen</NavLink>
             </button>
         </>
     );

@@ -20,7 +20,7 @@ function Register(){
     }
     return(
         <div className={"login-page-styling"}>
-            <h1>Dit is de login pagina</h1>
+            <h1>Dit is de register pagina</h1>
             <button onClick={testServer}>klik hier</button>
             <p>api informatie: {fetchedData}</p>
         </div>
