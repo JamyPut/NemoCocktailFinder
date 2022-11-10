@@ -1,0 +1,28 @@
+.cocktail-details-page-styling{
+    background-color: var(--primary-background-color);
+}
+
+.cocktail{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px;
+    font-size: 25px;
+}
+.cocktail img{
+    width: 75%;
+}
+.cocktail-image-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.cocktail-description{
+    width: 25%;
+}
+
+.svg-inline--fa{
+    padding-left: 8px;
+}

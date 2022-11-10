@@ -8,8 +8,8 @@ const SingleCocktailComponent = ({ id, name, image }) => {
     return (
         <section className="single-cocktail">
                 <img src={image} alt={name} />
-                <h3>{name}</h3>
                 <Link to={`/${id}`} className="single-cocktail-button">
+                    <p>{name}</p>
                     <FontAwesomeIcon icon={faCircleInfo}></FontAwesomeIcon>
                 </Link>
         </section>

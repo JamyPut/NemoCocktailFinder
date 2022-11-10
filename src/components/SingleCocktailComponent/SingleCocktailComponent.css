@@ -11,18 +11,22 @@
     box-shadow: var(--primary-box-shadow);
 }
 
-.single-cocktail h3{
-    align-self: flex-start;
+.single-cocktail p{
     text-shadow: var(--primary-box-shadow);
     background-color: var(--primary-button-color);
     color: var(--primary-text-color);
     border-radius: 25px;
-    padding: 5px;
+    padding: 3px 6px 3px 6px;
     margin: 5px;
 }
 
-.single-cocktail a{
-    align-self: flex-start;
-    font-size: 30px;
+.single-cocktail a:visited{
+    color: var(--primary-button-color)
+}
+.single-cocktail-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 22px;
     color: var(--primary-button-color);
 }
