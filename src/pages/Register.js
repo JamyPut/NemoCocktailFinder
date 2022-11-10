@@ -1,9 +1,9 @@
-import React, {useState} from "react";
-import "./Login.css"
-import { Link } from "react-router-dom";
+import React from "react";
+import "./Register.css"
+import {useState} from "react";
 import axios from "axios";
 
-function Login(){
+function Register(){
 
     const [fetchedData, setFetcheddata] = useState()
     const [url, seturl] = useState()
@@ -23,11 +23,7 @@ function Login(){
             <h1>Dit is de login pagina</h1>
             <button onClick={testServer}>klik hier</button>
             <p>api informatie: {fetchedData}</p>
-            <section>
-                <p>nog niet ingelogd?</p>
-                <Link to={"/register"}>klik hier</Link>
-            </section>
         </div>
     );
 }
-export default Login
+export default Register;

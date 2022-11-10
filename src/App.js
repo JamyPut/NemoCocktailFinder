@@ -8,6 +8,7 @@ import Cocktails from "./pages/Cocktails";
 import Profile from "./pages/Profile";
 import CocktailDetails from "./pages/CocktailDetails";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 
 function App() {
@@ -32,12 +33,15 @@ function App() {
                 <Route path={"/login"}>
                     <Login/>
                 </Route>
+                <Route path={"/register"}>
+                    <Register/>
+                </Route>
                 <Route path={"/:cocktailid"}>
                     <CocktailDetails/>
                 </Route>
             </Switch>
             <footer>
-
+                <p>NemoCocktailFinder door Jamy Put | Novi frontend eindopdracht nov 22'</p>
             </footer>
         </div>
     );
