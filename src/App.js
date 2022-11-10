@@ -40,9 +40,6 @@ function App() {
                     <CocktailDetails/>
                 </Route>
             </Switch>
-            <footer>
-                <p>NemoCocktailFinder door Jamy Put | Novi frontend eindopdracht nov 22'</p>
-            </footer>
         </div>
     );
 }

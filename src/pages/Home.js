@@ -21,6 +21,9 @@ function Home() {
                 <RandomCocktailComponent/>
                 <RandomCocktailComponent/>
             </div>
+            <footer>
+                <p>NemoCocktailFinder door Jamy Put | Novi frontend eindopdracht nov 22'</p>
+            </footer>
         </>
     );
 }
