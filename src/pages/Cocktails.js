@@ -64,7 +64,7 @@ function Cocktails(){
                     <section className={"cocktail-filters"}>
                         <button onClick={alcoholClick}>met alcohol</button>
                         <button onClick={nonAlcoholClick}>zonder alcohol</button>
-                        <form onSubmit={getSearchInput}>
+                        <form className={"search-form"} onSubmit={getSearchInput}>
                             <input placeholder={"bijv: pina colada"} type="text" ref={inputRef}/>
                             <button id={"submit-button"} type={"submit"}>zoek</button>
                         </form>
@@ -78,9 +78,9 @@ function Cocktails(){
             <section className={"cocktail-filters"}>
                 <button onClick={alcoholClick}>met alcohol</button>
                 <button onClick={nonAlcoholClick}>zonder alcohol</button>
-                <form onSubmit={getSearchInput}>
-                    <input type="text" ref={inputRef}/>
-                    <button placeholder={"bijv: pina colada"} id={"submit-button"} type={"submit"}>zoek</button>
+                <form className={"search-form"} onSubmit={getSearchInput}>
+                    <input placeholder={"bijv: pina colada"} type="text" ref={inputRef}/>
+                    <button id={"submit-button"} type={"submit"}>zoek</button>
                 </form>
             </section>
             <section className='section'>
