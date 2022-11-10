@@ -22,6 +22,9 @@ function App() {
               <Route path={"/faq"}>
                   <Faq/>
               </Route>
+              <Route path={"/profile"}>
+
+              </Route>
           </Switch>
           <footer>
 
