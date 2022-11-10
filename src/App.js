@@ -7,6 +7,7 @@ import Faq from "./pages/Faq";
 import Cocktails from "./pages/Cocktails";
 import Profile from "./pages/Profile";
 import CocktailDetails from "./pages/CocktailDetails";
+import Login from "./pages/Login";
 
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
                 </Route>
                 <Route path={"/profile"}>
                     <Profile/>
+                </Route>
+                <Route path={"/login"}>
+                    <Login/>
                 </Route>
                 <Route path={"/:cocktailid"}>
                     <CocktailDetails/>

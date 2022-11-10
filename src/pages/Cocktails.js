@@ -59,14 +59,14 @@ function Cocktails(){
                 <div className={"no-results-styling"}>
                     <h1 className='section-title'>
                     Vind jou cocktails!
-                    probeer een van de filter knoppen of vul een nieuw zoekresultaat in.
+                    Probeer een van de filter knoppen of vul een nieuw zoekresultaat in.
                 </h1>
                     <section className={"cocktail-filters"}>
-                        <button onClick={alcoholClick}>met alcohol</button>
-                        <button onClick={nonAlcoholClick}>zonder alcohol</button>
+                        <button onClick={alcoholClick}>Met alcohol</button>
+                        <button onClick={nonAlcoholClick}>Zonder alcohol</button>
                         <form className={"search-form"} onSubmit={getSearchInput}>
                             <input placeholder={"bijv: pina colada"} type="text" ref={inputRef}/>
-                            <button id={"submit-button"} type={"submit"}>zoek</button>
+                            <button id={"submit-button"} type={"submit"}>Zoek</button>
                         </form>
                     </section>
                 </div>
@@ -76,11 +76,11 @@ function Cocktails(){
     return(
         <div className={"cocktail-page-styling"}>
             <section className={"cocktail-filters"}>
-                <button onClick={alcoholClick}>met alcohol</button>
-                <button onClick={nonAlcoholClick}>zonder alcohol</button>
+                <button onClick={alcoholClick}>Met alcohol</button>
+                <button onClick={nonAlcoholClick}>Zonder alcohol</button>
                 <form className={"search-form"} onSubmit={getSearchInput}>
                     <input placeholder={"bijv: pina colada"} type="text" ref={inputRef}/>
-                    <button id={"submit-button"} type={"submit"}>zoek</button>
+                    <button id={"submit-button"} type={"submit"}>Zoek</button>
                 </form>
             </section>
             <section className='section'>

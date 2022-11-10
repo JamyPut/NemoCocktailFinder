@@ -66,7 +66,7 @@ function CocktailDetails() {
                                        }) => {
                 return (
                     <div key={idDrink}>
-                        <h1>cocktail detail pagina</h1>
+                        <h1>Cocktail detail pagina</h1>
                         <div className={"cocktail"}>
                             <section>
                                 <div className={"cocktail-image-text"}>
@@ -81,21 +81,21 @@ function CocktailDetails() {
                                     <FontAwesomeIcon icon={faListCheck}></FontAwesomeIcon>
                                 </h3>
                                 <ul>
-                                    <li>{strIngredient1}{strMeasure1}</li>
-                                    <li>{strIngredient2}{strMeasure2}</li>
-                                    <li>{strIngredient3}{strMeasure3}</li>
-                                    <li>{strIngredient4}{strMeasure4}</li>
-                                    <li>{strIngredient5}{strMeasure5}</li>
-                                    <li>{strIngredient6}{strMeasure6}</li>
-                                    <li>{strIngredient7}{strMeasure7}</li>
-                                    <li>{strIngredient8}{strMeasure8}</li>
-                                    <li>{strIngredient9}{strMeasure9}</li>
-                                    <li>{strIngredient10}{strMeasure10}</li>
-                                    <li>{strIngredient11}{strMeasure11}</li>
-                                    <li>{strIngredient12}{strMeasure12}</li>
-                                    <li>{strIngredient13}{strMeasure13}</li>
-                                    <li>{strIngredient14}{strMeasure14}</li>
-                                    <li>{strIngredient15}{strMeasure15}</li>
+                                    <li>{strIngredient1} {strMeasure1}</li>
+                                    <li>{strIngredient2} {strMeasure2}</li>
+                                    <li>{strIngredient3} {strMeasure3}</li>
+                                    <li>{strIngredient4} {strMeasure4}</li>
+                                    <li>{strIngredient5} {strMeasure5}</li>
+                                    <li>{strIngredient6} {strMeasure6}</li>
+                                    <li>{strIngredient7} {strMeasure7}</li>
+                                    <li>{strIngredient8} {strMeasure8}</li>
+                                    <li>{strIngredient9} {strMeasure9}</li>
+                                    <li>{strIngredient10} {strMeasure10}</li>
+                                    <li>{strIngredient11} {strMeasure11}</li>
+                                    <li>{strIngredient12} {strMeasure12}</li>
+                                    <li>{strIngredient13} {strMeasure13}</li>
+                                    <li>{strIngredient14} {strMeasure14}</li>
+                                    <li>{strIngredient15} {strMeasure15}</li>
                                 </ul>
                                 <h3>
                                     Beschrijving
