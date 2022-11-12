@@ -6,6 +6,9 @@ import {Link} from "react-router-dom";
 const usernameREGEX = /.{6,24}/;
 const passREGEX = /.{6,24}/;
 const emailREGEX = /@/;
+const role = ["user"]
+
+const serverUrl = "https://frontend-educational-backend.herokuapp.com/api/auth/signup"
 
 const Register = () =>{
 
@@ -30,9 +33,18 @@ const Register = () =>{
     }, [username])
 
     useEffect(() => {
+        const result = emailREGEX.test(email);
+        console.log(result);
+        console.log(email);
+        setValidEmail(result);
+    }, [email])
+
+    useEffect(() => {
         const result = passREGEX.test(pass);
         console.log(result);
         console.log(pass);
+        console.log(confirmPass)
+        console.log(validConfirmedPass)
         setValidPass(result);
         const checkConfirmedPass = pass === confirmPass;
         setValidConfirmedPass(checkConfirmedPass);
@@ -42,31 +54,34 @@ const Register = () =>{
         setErrorMessage("");
     }, [username, pass, confirmPass])
 
-
-// function Register(){
-
-    const [fetchedData, setFetcheddata] = useState()
-    const [url, seturl] = useState()
-    const serverUrl = "https://frontend-educational-backend.herokuapp.com/api/test/all"
-
-    const testServer = () => {
-        axios.get(serverUrl)
-            .then(res => {
-                console.log(res.data)
-                setFetcheddata(res.data)
-                console.log(fetchedData)
+    const sendRegData = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post(serverUrl, JSON.stringify({
+                username, password: pass, email, role }),{
+                headers: {"Content-Type": "application/json"}
             })
-            .catch(e => console.log(e));
+            console.log(response)
+            console.log(response.data)
+        } catch (error){
+            if (!error?.response){
+                setErrorMessage("No response from server");
+            } else {
+                setErrorMessage("Registration unsuccesfull")
+            }
+        }
     }
+
+
+
+
     return(
         <div  className={"register-page-styling"}>
             <section>
                 <h1>Dit is de register pagina</h1>
-                <button onClick={testServer}>klik hier</button>
-                <p>api informatie: {fetchedData}</p>
             </section>
             <section className={"register-form-section"}>
-                <form>
+                <form onSubmit={sendRegData}>
                     <h3>Vul de gegevens in</h3>
                     <hr className={"rounded"}/>
                     <label htmlFor="username">Gebruikersnaam:</label>
@@ -100,7 +115,7 @@ const Register = () =>{
                         id={"confirmPass"}
                         onChange={(e) => setConfirmPass(e.target.value)}
                     />
-                    <button disabled={!validUsername || !validEmail || !validPass || !validConfirmedPass}>
+                    <button disabled={!validUsername || !validEmail || !validPass || !validConfirmedPass ? true : false}>
                         Inloggen
                     </button>
                 </form>
