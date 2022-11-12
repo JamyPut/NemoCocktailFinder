@@ -1,30 +1,33 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./Login.css"
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-function Login(){
+const Login = () => {
 
-    const [fetchedTest, setFetchedTest] = useState()
-    const [url, seturl] = useState()
-    const serverUrl = "https://frontend-educational-backend.herokuapp.com/api/test/all"
+    const [username, setUsername] = useState("");
+    const [pass, setPass] = useState("");
+    const [errorMessage, setErrorMessage] = useState("")
 
-    const testServer = () => {
-        axios.get(serverUrl)
-            .then(res => {
-                console.log(res.data)
-                setFetchedTest(res.data)
-                console.log(fetchedTest)
-            })
-            .catch(e => console.log(e));
+    const serverUrl = "https://frontend-educational-backend.herokuapp.com/api/auth/signin"
+
+    useEffect(() => {
+        setErrorMessage("")
+    }, [username, pass])
+
+    const loginUser = async (e) => {
+        e.preventDefault();
+        console.log(username, pass);
+        setUsername("");
+        setPass("");
+
     }
+
     return(
         <div className={"login-page-styling"}>
             <h1>Dit is de login pagina</h1>
-            <button onClick={testServer}>klik hier</button>
-            <p>api informatie: {fetchedTest}</p>
             <section className={"login-form-section"}>
-                <form>
+                <form onSubmit={loginUser}>
                     <h3>Vul je inloggegevens in</h3>
                     <hr className={"rounded"}/>
                     <label htmlFor="username">Gebruikersnaam:</label>
@@ -33,12 +36,18 @@ function Login(){
                         type="text"
                         id={"username"}
                         autoComplete={"off"}
+                        onChange={(e) => setUsername(e.target.value)}
+                        value={username}
+                        required
                     />
-                    <label htmlFor="password">Wachtwoord:</label>
+                    <label htmlFor="pass">Wachtwoord:</label>
                     <input
-                        placeholder={"********"}
+                        placeholder={"******"}
                         type="password"
-                        id={"password"}
+                        id={"pass"}
+                        onChange={(e) => setPass(e.target.value)}
+                        value={pass}
+                        required
                     />
                     <button>Inloggen</button>
                 </form>

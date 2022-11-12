@@ -54,7 +54,7 @@ const Register = () =>{
         setErrorMessage("");
     }, [username, pass, confirmPass])
 
-    const sendRegData = async (e) => {
+    const registerUser = async (e) => {
         e.preventDefault();
         try {
             const response = await axios.post(serverUrl, JSON.stringify({
@@ -83,7 +83,7 @@ const Register = () =>{
             </section>
             <section className={"register-form-section"}>
                 <p>{errorMessage}</p>
-                <form onSubmit={sendRegData}>
+                <form onSubmit={registerUser}>
                     <h3>Vul de gegevens in</h3>
                     <hr className={"rounded"}/>
                     <label htmlFor="username">Gebruikersnaam:</label>
@@ -105,14 +105,14 @@ const Register = () =>{
                     />
                     <label htmlFor="pass">Wachtwoord:</label>
                     <input
-                        placeholder={"********"}
+                        placeholder={"******"}
                         type="password"
                         id={"pass"}
                         onChange={(e) => setPass(e.target.value)}
                     />
                     <label htmlFor="confirmPass">Bevestig wachtwoord:</label>
                     <input
-                        placeholder={"********"}
+                        placeholder={"******"}
                         type="password"
                         id={"confirmPass"}
                         onChange={(e) => setConfirmPass(e.target.value)}
