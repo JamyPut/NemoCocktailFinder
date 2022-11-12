@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from "react";
+import React, {useEffect, useState} from "react";
 import "./Register.css"
 import axios from "axios";
 import {Link} from "react-router-dom";
@@ -67,7 +67,8 @@ const Register = () =>{
             if (!error?.response){
                 setErrorMessage("No response from server");
             } else {
-                setErrorMessage("Registration unsuccesfull")
+                console.log(error.response)
+                setErrorMessage(error.response.data.message)
             }
         }
     }
@@ -81,6 +82,7 @@ const Register = () =>{
                 <h1>Dit is de register pagina</h1>
             </section>
             <section className={"register-form-section"}>
+                <p>{errorMessage}</p>
                 <form onSubmit={sendRegData}>
                     <h3>Vul de gegevens in</h3>
                     <hr className={"rounded"}/>
@@ -115,7 +117,7 @@ const Register = () =>{
                         id={"confirmPass"}
                         onChange={(e) => setConfirmPass(e.target.value)}
                     />
-                    <button disabled={!validUsername || !validEmail || !validPass || !validConfirmedPass ? true : false}>
+                    <button disabled={!validUsername || !validEmail || !validPass || !validConfirmedPass}>
                         Inloggen
                     </button>
                 </form>
