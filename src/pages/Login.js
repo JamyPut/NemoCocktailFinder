@@ -1,12 +1,12 @@
-import React, {useEffect, useState, useContext} from "react";
-import AuthContext from "../context/AuthProvider";
+import React, {useEffect, useState} from "react";
 import "./Login.css"
 import { Link } from "react-router-dom";
 import axios from "axios";
+import useAuth from "../helpers/useAuth";
 
 const Login = () => {
 
-    const {setAuth} = useContext(AuthContext)
+    const {setAuth} = useAuth();
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("")
     const [pass, setPass] = useState("");
@@ -40,7 +40,7 @@ const Login = () => {
                 setErrorMessage("No response from server");
             } else {
                 console.log(error.response)
-                setErrorMessage(error.response.data.message)
+                setErrorMessage(error.response.status)
             }
         }
     }
@@ -50,6 +50,7 @@ const Login = () => {
             <h1>Dit is de login pagina</h1>
             <section className={"login-form-section"}>
                 <p>Ingelod met {email}</p>
+                <p>Foutcode == {errorMessage}</p>
                 <form onSubmit={loginUser}>
                     <h3>Vul je inloggegevens in</h3>
                     <hr className={"rounded"}/>

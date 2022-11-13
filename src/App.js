@@ -9,7 +9,7 @@ import Profile from "./pages/Profile";
 import CocktailDetails from "./pages/CocktailDetails";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-
+import RequireAuth from "./helpers/RequireAuth"
 
 function App() {
     return (
@@ -18,6 +18,8 @@ function App() {
                 <NavBar/>
             </header>
             <Switch>
+
+                {/*public routes*/}
                 <Route exact path={"/"}>
                     <Home/>
                 </Route>
@@ -26,9 +28,6 @@ function App() {
                 </Route>
                 <Route path={"/faq"}>
                     <Faq/>
-                </Route>
-                <Route path={"/profile"}>
-                    <Profile/>
                 </Route>
                 <Route path={"/login"}>
                     <Login/>
@@ -39,6 +38,9 @@ function App() {
                 <Route path={"/:cocktailid"}>
                     <CocktailDetails/>
                 </Route>
+
+                {/*protected routes*/}
+                <RequireAuth path={"/profile"} component={Profile}> </RequireAuth>
             </Switch>
         </div>
     );

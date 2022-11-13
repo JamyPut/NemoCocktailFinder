@@ -118,7 +118,7 @@ const Register = () =>{
                         onChange={(e) => setConfirmPass(e.target.value)}
                     />
                     <button disabled={!validUsername || !validEmail || !validPass || !validConfirmedPass}>
-                        Inloggen
+                        Registreren
                     </button>
                 </form>
                 <hr className={"rounded"}/>
