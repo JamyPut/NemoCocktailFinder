@@ -1,5 +1,5 @@
 import './App.css';
-import {Link, Route, Switch} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import React, {useState} from 'react';
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home"
@@ -10,6 +10,7 @@ import CocktailDetails from "./pages/CocktailDetails";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import RequireAuth from "./helpers/RequireAuth"
+import Layout from "./helpers/Layout";
 
 function App() {
     return (
@@ -17,33 +18,23 @@ function App() {
             <header>
                 <NavBar/>
             </header>
-            <Switch>
-
-                {/*public routes*/}
-                <Route exact path={"/"}>
-                    <Home/>
+            <Routes>
+                <Route path={"/"} element={<Layout />}>
+                    {/*public routes*/}
+                    <Route path={"/"} element={<Home/>} />
+                    <Route path={"/cocktails"} element={<Cocktails/>}/>
+                    <Route path={"/faq"} element={<Faq/>}/>
+                    <Route path={"/login"} element={<Login/>}/>
+                    <Route path={"/register"} element={<Register/>}/>
+                    <Route path={"/:cocktailid"} element={<CocktailDetails/>}/>
+                    <Route path={"/register"} element={<Register/>}/>
+                    {/*protected routes*/}
+                    <Route element={<RequireAuth />}>
+                        <Route path={"/profile"} element={<Profile/>}/>
+                    </Route>
                 </Route>
-                <Route path={"/cocktails"}>
-                    <Cocktails/>
-                </Route>
-                <Route path={"/faq"}>
-                    <Faq/>
-                </Route>
-                <Route path={"/login"}>
-                    <Login/>
-                </Route>
-                <Route path={"/register"}>
-                    <Register/>
-                </Route>
-                <Route path={"/:cocktailid"}>
-                    <CocktailDetails/>
-                </Route>
-
-                {/*protected routes*/}
-                <RequireAuth path={"/profile"} component={Profile}> </RequireAuth>
-            </Switch>
+            </Routes>
         </div>
     );
 }
-
 export default App;

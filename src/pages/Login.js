@@ -1,12 +1,15 @@
 import React, {useEffect, useState} from "react";
 import "./Login.css"
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import useAuth from "../helpers/useAuth";
 
 const Login = () => {
 
     const {setAuth} = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("")
     const [pass, setPass] = useState("");
@@ -35,22 +38,24 @@ const Login = () => {
             console.log(username, pass);
             setUsername("");
             setPass("");
+            navigate(from, {replace: true});
         } catch (error){
             if (!error?.response){
                 setErrorMessage("No response from server");
-            } else {
+            } else if (error.response?.status === 401) {
                 console.log(error.response)
-                setErrorMessage(error.response.status)
+                setErrorMessage("Verkeerde gebruikersnaam of wachtwoord");
+            } else {
+                setErrorMessage("Login mislukt")
             }
         }
     }
 
     return(
         <div className={"login-page-styling"}>
-            <h1>Dit is de login pagina</h1>
+            <h1>Login voor toegang tot de profiel pagina.</h1>
             <section className={"login-form-section"}>
-                <p>Ingelod met {email}</p>
-                <p>Foutcode == {errorMessage}</p>
+                <p>{errorMessage}</p>
                 <form onSubmit={loginUser}>
                     <h3>Vul je inloggegevens in</h3>
                     <hr className={"rounded"}/>
