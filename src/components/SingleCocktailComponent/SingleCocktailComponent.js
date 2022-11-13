@@ -10,7 +10,7 @@ const SingleCocktailComponent = ({ id, name, image }) => {
                 <img src={image} alt={name} />
                 <Link to={`/${id}`} className="single-cocktail-button">
                     <p>{name}</p>
-                    <FontAwesomeIcon icon={faCircleInfo}></FontAwesomeIcon>
+                    <FontAwesomeIcon icon={faCircleInfo} />
                 </Link>
         </section>
     );

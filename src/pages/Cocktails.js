@@ -12,8 +12,6 @@ function Cocktails(){
     const alcoholUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=alcoholic'
     const nonAlcoholUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic'
 
-
-
     const alcoholClick = () => {
         setUrl(alcoholUrl);
         console.log(url)
@@ -53,7 +51,7 @@ function Cocktails(){
     },[url]);
 
 
-    if (cocktails && cocktails.length < 1){
+    if (cocktails && cocktails?.length < 1){
         return (
             <div className={"cocktail-page-styling"}>
                 <div className={"no-results-styling"}>

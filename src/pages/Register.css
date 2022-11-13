@@ -28,3 +28,7 @@
     border-radius: 10px;
     color: var(--primary-text-color);
 }
+.register-form-section button:disabled{
+    border: transparent;
+    color: grey;
+}

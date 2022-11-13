@@ -31,13 +31,13 @@ function RandomCocktailComponent(){
         <section>
             <div className={"random-cocktail-section"}>
                 <button onClick={fetchCocktail} className={"randomize-button"}>
-                    <FontAwesomeIcon icon={faRotate}></FontAwesomeIcon>
+                    <FontAwesomeIcon icon={faRotate} />
                     verras me!
                 </button>
                 <img src={cocktailTitle && cocktailTitle.strDrinkThumb} alt="cocktail-image"/>
                 <button className={"random-cocktail-button"}>
                     <NavLink to={`/${cocktailTitle.idDrink}`}>
-                        <FontAwesomeIcon icon={faCocktail}></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={faCocktail} />
                         {cocktailTitle && cocktailTitle.strDrink}
                     </NavLink>
                 </button>

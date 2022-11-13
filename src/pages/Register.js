@@ -23,7 +23,6 @@ const Register = () =>{
     const [validEmail, setValidEmail] = useState(false)
 
     const [errorMessage, setErrorMessage] = useState("")
-    const [succes, setSucces] = useState("")
 
     useEffect(() => {
         const result = usernameREGEX.test(username);
