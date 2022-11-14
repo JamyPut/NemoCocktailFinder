@@ -10,12 +10,12 @@ const randomCocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.ph
 
 function RandomCocktailComponent(){
 
-    const [cocktailTitle, setCocktailTitle] = useState([])
+    const [cocktail, setCocktail] = useState([])
     const fetchCocktail = () => {
         axios.get(randomCocktailUrl)
             .then(res => {
                 console.log(res.data)
-                setCocktailTitle(res.data.drinks[0])
+                setCocktail(res.data.drinks[0])
             })
             .catch(e => console.log(e))
             }
@@ -34,11 +34,11 @@ function RandomCocktailComponent(){
                     <FontAwesomeIcon icon={faRotate} />
                     verras me!
                 </button>
-                <img src={cocktailTitle && cocktailTitle.strDrinkThumb} alt="cocktail-image"/>
+                <img src={cocktail && cocktail.strDrinkThumb} alt="cocktail-image"/>
                 <button className={"random-cocktail-button"}>
-                    <NavLink to={`/${cocktailTitle.idDrink}`}>
+                    <NavLink to={`/${cocktail.idDrink}`}>
                         <FontAwesomeIcon icon={faCocktail} />
-                        {cocktailTitle && cocktailTitle.strDrink}
+                        {cocktail && cocktail.strDrink}
                     </NavLink>
                 </button>
             </div>

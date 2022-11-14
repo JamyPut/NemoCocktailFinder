@@ -11,13 +11,24 @@ const SingleCocktailComponent = ({ id, name, image }) => {
         cocktailName:name,
         cocktailImage:image
     }
+    const arrayOfCocktailObjects ={
+        drinks:[
+            {
+                strDrink:name,
+                strDrinkThumb:image,
+                idDrink:id
+            }
+            ]
+    }
+    console.log(cocktailObject)
+    console.log(arrayOfCocktailObjects)
     const favoriteHandler = () => {
         console.log("Button is clicked")
-        localStorage.setItem("cocktailObject", JSON.stringify(cocktailObject));
+        localStorage.setItem("arrayOfCocktailObjects", JSON.stringify(arrayOfCocktailObjects));
         // localStorage.setItem("idDrink", id)
         // localStorage.setItem("strDrink", name)
         // localStorage.setItem("strDrinkThumb", image)
-        console.log(localStorage.getItem("cocktailArray"))
+        console.log(localStorage.getItem("arrayOfCocktailObjects"))
     }
     return (
         <section className="single-cocktail">

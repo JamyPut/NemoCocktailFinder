@@ -6,6 +6,9 @@ const drink = localStorage.getItem("strDrink")
 const drinkImage = localStorage.getItem("strDrinkThumb")
 // const favoriteCocktail = JSON.parse(localStorage.getItem("cocktailArray"))
 const cocktailObject = JSON.parse(localStorage.getItem("cocktailObject"))
+const arrayOfCocktailObjects = JSON.parse(localStorage.getItem("arrayOfCocktailObjects"))
+console.log(arrayOfCocktailObjects)
+const cocktailArray = arrayOfCocktailObjects.drinks[0]
 function Favorites(){
     return(
         <>
@@ -15,9 +18,7 @@ function Favorites(){
                 <img src={drinkImage} alt={drink}/>
             </section>
             <section>
-                {Object.keys(cocktailObject).map(({ cocktailId, cocktailImage, cocktailName}) =>{
-                    return <SingleCocktailComponent key={cocktailId} id={cocktailId} image={cocktailImage} name={cocktailName} />
-                })}
+                <SingleCocktailComponent key={cocktailArray.idDrink} id={cocktailArray.idDrink} image={cocktailArray.strDrinkThumb} name={cocktailArray.strDrink} />
             </section>
         </>
     );
