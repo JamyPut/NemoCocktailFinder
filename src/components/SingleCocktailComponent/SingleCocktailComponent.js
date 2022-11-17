@@ -6,30 +6,23 @@ import {faCircleInfo, faStar} from "@fortawesome/free-solid-svg-icons";
 
 const SingleCocktailComponent = ({ id, name, image }) => {
 
-    const cocktailObject = {
-        cocktailId:id,
-        cocktailName:name,
-        cocktailImage:image
-    }
-    const arrayOfCocktailObjects ={
-        drinks:[
-            {
-                strDrink:name,
-                strDrinkThumb:image,
-                idDrink:id
-            }
-            ]
-    }
-    console.log(cocktailObject)
-    console.log(arrayOfCocktailObjects)
+    const cocktailArray = [
+        {
+            strDrink:name,
+            strDrinkThumb:image,
+            idDrink:id
+        }
+    ]
     const favoriteHandler = () => {
-        console.log("Button is clicked")
-        localStorage.setItem("arrayOfCocktailObjects", JSON.stringify(arrayOfCocktailObjects));
-        // localStorage.setItem("idDrink", id)
-        // localStorage.setItem("strDrink", name)
-        // localStorage.setItem("strDrinkThumb", image)
-        console.log(localStorage.getItem("arrayOfCocktailObjects"))
+        const currentFavorites = JSON.parse(localStorage.getItem("favoriteCocktails"))
+        if (!currentFavorites.includes(cocktailArray)){
+            currentFavorites.push(cocktailArray)
+        }
+        localStorage.setItem("favoriteCocktails", JSON.stringify(currentFavorites));
+        console.log(currentFavorites)
+        // localStorage.setItem("favoriteCocktails", JSON.stringify(cocktailArray))
     }
+
     return (
         <section className="single-cocktail">
                 <img src={image} alt={name} />

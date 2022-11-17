@@ -37,7 +37,7 @@ function Cocktails(){
     const fetchCocktail = () => {
         axios.get(url)
             .then(res => {
-                console.log(res.data)
+                // console.log(res.data)
                 setCocktails(res.data.drinks)
             })
             .catch(e => console.log(e))
