@@ -1,6 +1,6 @@
 import './App.css';
 import {Route, Routes} from "react-router-dom";
-import React from 'react';
+import React, {useEffect} from 'react';
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home"
 import Faq from "./pages/Faq";
@@ -12,6 +12,17 @@ import Register from "./pages/Register";
 import RequireAuth from "./helpers/RequireAuth"
 
 function App() {
+    const localStorageDummy = () =>{
+        const bar = undefined
+        const dummyArray = [
+            {foo:bar}
+        ]
+        localStorage.setItem("favoriteCocktails", JSON.stringify(dummyArray))
+    }
+
+    useEffect(() =>{
+        localStorageDummy()
+    },[])
     return (
         <div className={"page-background"}>
             <header>

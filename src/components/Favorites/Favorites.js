@@ -3,7 +3,9 @@ import "./Favorites.css"
 import SingleCocktailComponent from "../SingleCocktailComponent/SingleCocktailComponent";
 
 
-const favoriteCocktails = JSON.parse(localStorage.getItem("favoriteCocktails"));
+const favoritefetch = JSON.parse(localStorage.getItem("favoriteCocktails"));
+const favoriteCocktails = favoritefetch.slice(1)
+
 console.log(favoriteCocktails)
 function Favorites(){
     return(
