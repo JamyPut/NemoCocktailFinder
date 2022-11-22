@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./SingleCocktailComponent.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCircleInfo, faStar} from "@fortawesome/free-solid-svg-icons";
+import {faCircleInfo, faStar, faRemove} from "@fortawesome/free-solid-svg-icons";
 
 const SingleCocktailComponent = ({ id, name, image }) => {
 
@@ -11,14 +11,21 @@ const SingleCocktailComponent = ({ id, name, image }) => {
         strDrinkThumb: image,
         idDrink: id
     }
-    const favoriteHandler = () => {
-        const currentFavorites = JSON.parse(localStorage.getItem("favoriteCocktails"))
-        if (!currentFavorites.includes(cocktailObject)){
-            currentFavorites.push(cocktailObject)
-        }
-        localStorage.setItem("favoriteCocktails", JSON.stringify(currentFavorites));
+
+    const favoriteAdder = () => {
+        let currentFavorites = JSON.parse(localStorage.getItem("favoriteCocktails")) || [];
+        currentFavorites = currentFavorites.filter((cocktailItem) => cocktailItem.idDrink !== cocktailObject.idDrink)
+        currentFavorites.unshift(cocktailObject)
+        // currentFavorites.push(cocktailObject);
         console.log(currentFavorites)
-        // localStorage.setItem("favoriteCocktails", JSON.stringify(cocktailArray))
+        localStorage.setItem("favoriteCocktails", JSON.stringify(currentFavorites));
+    }
+    const favoriteRemover = () => {
+        let currentFavorites = JSON.parse(localStorage.getItem("favoriteCocktails")) || [];
+        currentFavorites = currentFavorites.filter((cocktailItem) => cocktailItem.idDrink !== cocktailObject.idDrink)
+        console.log(currentFavorites)
+        // currentFavorites.splice(cocktailIndex, 1);
+        localStorage.setItem("favoriteCocktails", JSON.stringify(currentFavorites));
     }
 
     return (
@@ -28,9 +35,13 @@ const SingleCocktailComponent = ({ id, name, image }) => {
                     <p>{name}</p>
                     <FontAwesomeIcon icon={faCircleInfo} />
                 </Link>
-                <button onClick={favoriteHandler}>
+                <button onClick={favoriteAdder}>
                     Toevoegen aan favorieten
                     <FontAwesomeIcon icon={faStar} />
+                </button>
+                <button onClick={favoriteRemover}>
+                    Verwijderen uit favorieten
+                    <FontAwesomeIcon icon={faRemove} />
                 </button>
         </section>
     );

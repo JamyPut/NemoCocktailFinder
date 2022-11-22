@@ -57,7 +57,7 @@ function Cocktails() {
             <div className={"cocktail-page-styling"}>
                 <div className={"no-results-styling"}>
                     <h1 className='section-title'>
-                        Vind jou cocktails!
+                        Vind jouw cocktails!
                         Probeer een van de filter knoppen of vul een nieuw zoekresultaat in.
                     </h1>
                     <section className={"cocktail-filters"}>

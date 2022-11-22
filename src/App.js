@@ -12,17 +12,6 @@ import Register from "./pages/Register";
 import RequireAuth from "./helpers/RequireAuth"
 
 function App() {
-    const localStorageDummy = () =>{
-        const bar = undefined
-        const dummyArray = [
-            {foo:bar}
-        ]
-        localStorage.setItem("favoriteCocktails", JSON.stringify(dummyArray))
-    }
-
-    useEffect(() =>{
-        localStorageDummy()
-    },[])
     return (
         <div className={"page-background"}>
             <header>
