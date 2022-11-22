@@ -15,7 +15,7 @@ const SingleCocktailComponent = ({ id, name, image }) => {
     const favoriteAdder = () => {
         let currentFavorites = JSON.parse(localStorage.getItem("favoriteCocktails")) || [];
         currentFavorites = currentFavorites.filter((cocktailItem) => cocktailItem.idDrink !== cocktailObject.idDrink)
-        currentFavorites.unshift(cocktailObject)
+        currentFavorites.push(cocktailObject)
         // currentFavorites.push(cocktailObject);
         console.log(currentFavorites)
         localStorage.setItem("favoriteCocktails", JSON.stringify(currentFavorites));

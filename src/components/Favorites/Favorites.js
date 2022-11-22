@@ -4,9 +4,8 @@ import SingleCocktailComponent from "../SingleCocktailComponent/SingleCocktailCo
 
 
 const favoritefetch = JSON.parse(localStorage.getItem("favoriteCocktails"));
-const favoriteCocktails = favoritefetch?.slice(1)
 
-console.log(favoriteCocktails)
+console.log(favoritefetch)
 function Favorites(){
     return(
         <>
@@ -16,7 +15,7 @@ function Favorites(){
             <section>
                 <button onClick={() => window.location.reload()}>Favorieten ophalen!</button>
                 <div>
-                    {favoriteCocktails && favoriteCocktails.map(({strDrink, strDrinkThumb, idDrink}) => {
+                    {favoritefetch && favoritefetch.map(({strDrink, strDrinkThumb, idDrink}) => {
                     return <SingleCocktailComponent key={idDrink} id={idDrink} image={strDrinkThumb} name={strDrink}/>;
                 })}
                 </div>
