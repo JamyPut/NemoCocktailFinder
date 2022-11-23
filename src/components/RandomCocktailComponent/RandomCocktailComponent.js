@@ -4,6 +4,8 @@ import "./RandomCocktailComponent.css"
 import axios from "axios";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faRotate, faCocktail} from "@fortawesome/free-solid-svg-icons";
+import FavoriteAdder from "../FavoriteButtons/FavoriteAdder";
+import FavoriteRemover from "../FavoriteButtons/FavoriteRemover";
 
 
 const randomCocktailUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
@@ -41,6 +43,8 @@ function RandomCocktailComponent(){
                         {cocktail && cocktail.strDrink}
                     </NavLink>
                 </button>
+                <FavoriteAdder id={cocktail.idDrink} name={cocktail.strDrink} image={cocktail.strDrinkThumb} />
+                <FavoriteRemover id={cocktail.idDrink} name={cocktail.strDrink} image={cocktail.strDrinkThumb} />
             </div>
         </section>
     )
