@@ -9,7 +9,6 @@ function Cocktails() {
     const [cocktails, setCocktails] = useState([])
     const inputRef = useRef()
 
-    const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail'
     const alcoholUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=alcoholic'
     const nonAlcoholUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic'
 

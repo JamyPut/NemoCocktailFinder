@@ -2,31 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./SingleCocktailComponent.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCircleInfo, faStar, faRemove} from "@fortawesome/free-solid-svg-icons";
+import {faCircleInfo} from "@fortawesome/free-solid-svg-icons";
+import FavoriteAdder from "../FavoriteButtons/FavoriteAdder";
+import FavoriteRemover from "../FavoriteButtons/FavoriteRemover";
 
 const SingleCocktailComponent = ({ id, name, image }) => {
-
-    const cocktailObject = {
-        strDrink: name,
-        strDrinkThumb: image,
-        idDrink: id
-    }
-
-    const favoriteAdder = () => {
-        let currentFavorites = JSON.parse(localStorage.getItem("favoriteCocktails")) || [];
-        currentFavorites = currentFavorites.filter((cocktailItem) => cocktailItem.idDrink !== cocktailObject.idDrink)
-        currentFavorites.push(cocktailObject)
-        // currentFavorites.push(cocktailObject);
-        console.log(currentFavorites)
-        localStorage.setItem("favoriteCocktails", JSON.stringify(currentFavorites));
-    }
-    const favoriteRemover = () => {
-        let currentFavorites = JSON.parse(localStorage.getItem("favoriteCocktails")) || [];
-        currentFavorites = currentFavorites.filter((cocktailItem) => cocktailItem.idDrink !== cocktailObject.idDrink)
-        console.log(currentFavorites)
-        // currentFavorites.splice(cocktailIndex, 1);
-        localStorage.setItem("favoriteCocktails", JSON.stringify(currentFavorites));
-    }
 
     return (
         <section className="single-cocktail">
@@ -35,14 +15,8 @@ const SingleCocktailComponent = ({ id, name, image }) => {
                     <p>{name}</p>
                     <FontAwesomeIcon icon={faCircleInfo} />
                 </Link>
-                <button onClick={favoriteAdder}>
-                    Toevoegen aan favorieten
-                    <FontAwesomeIcon icon={faStar} />
-                </button>
-                <button onClick={favoriteRemover}>
-                    Verwijderen uit favorieten
-                    <FontAwesomeIcon icon={faRemove} />
-                </button>
+                <FavoriteAdder id={id} name={name} image={image} />
+                <FavoriteRemover id={id} name={name} image={image} />
         </section>
     );
 };
