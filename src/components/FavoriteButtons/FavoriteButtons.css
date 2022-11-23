@@ -1,0 +1,7 @@
+.favorite-button{
+    background-color: var(--primary-button-color);
+    border-radius: 25px;
+    margin: 2px;
+    padding: 4px;
+    color: var(--primary-text-color);
+}

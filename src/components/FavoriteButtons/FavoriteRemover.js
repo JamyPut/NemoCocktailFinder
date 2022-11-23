@@ -1,8 +1,9 @@
 import React from "react";
+import "./FavoriteButtons.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faStar, faRemove} from "@fortawesome/free-solid-svg-icons";
+import {faRemove} from "@fortawesome/free-solid-svg-icons";
 
-const FavoriteRemover = ({ id, name, image }) => {
+const FavoriteRemover = ({id, name, image}) => {
 
     const cocktailObject = {
         strDrink: name,
@@ -16,10 +17,10 @@ const FavoriteRemover = ({ id, name, image }) => {
         localStorage.setItem("favoriteCocktails", JSON.stringify(currentFavorites));
     }
 
-    return(
-        <button onClick={handleRemoveFavorite}>
-            Verwijderen uit favorieten! component
-            <FontAwesomeIcon icon={faRemove} />
+    return (
+        <button onClick={handleRemoveFavorite} className={"favorite-button"}>
+            Verwijderen uit favorieten!
+            <FontAwesomeIcon icon={faRemove}/>
         </button>
     )
 };

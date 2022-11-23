@@ -1,8 +1,9 @@
 import React from "react";
+import "./FavoriteButtons.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faStar, faRemove} from "@fortawesome/free-solid-svg-icons";
+import {faStar} from "@fortawesome/free-solid-svg-icons";
 
-const FavoriteAdder = ({ id, name, image }) => {
+const FavoriteAdder = ({id, name, image}) => {
 
     const cocktailObject = {
         strDrink: name,
@@ -17,10 +18,10 @@ const FavoriteAdder = ({ id, name, image }) => {
         localStorage.setItem("favoriteCocktails", JSON.stringify(currentFavorites));
     }
 
-    return(
-        <button onClick={handleFavorite}>
-            Toevoegen aan favorieten! component
-            <FontAwesomeIcon icon={faStar} />
+    return (
+        <button onClick={handleFavorite} className={"favorite-button"}>
+            Toevoegen aan favorieten!
+            <FontAwesomeIcon icon={faStar}/>
         </button>
     )
 };
