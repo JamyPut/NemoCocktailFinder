@@ -16,8 +16,8 @@ function Profile() {
                     <Favorites/>
                 </section>
                 <section className={"profile-component"}>
-                    <h1>hoi dit is het profiel gedeelte</h1>
-                    <p>Je bent ingelogd als: {authInfo.auth.username}</p>
+                    <h2>Gebruiker:</h2>
+                    <h3>Je bent ingelogd als: {authInfo.auth.username}</h3>
                 </section>
             </div>
         </div>
