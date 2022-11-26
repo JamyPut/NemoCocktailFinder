@@ -1,6 +1,8 @@
 import React from "react";
 import "./Favorites.css"
 import SingleCocktailComponent from "../SingleCocktailComponent/SingleCocktailComponent";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faRefresh} from "@fortawesome/free-solid-svg-icons";
 
 
 const favoritefetch = JSON.parse(localStorage.getItem("favoriteCocktails"));
@@ -9,12 +11,14 @@ console.log(favoritefetch)
 function Favorites(){
     return(
         <>
-            <section>
+            <section className={"favorite-title"}>
                 <h2>Favorieten</h2>
+                <button className={"refresh-favorites"} onClick={() => window.location.reload()}>
+                    <FontAwesomeIcon icon={faRefresh} />
+                </button>
             </section>
             <section>
-                <button onClick={() => window.location.reload()}>Favorieten ophalen!</button>
-                <div>
+                <div className={"favorite-cocktail"}>
                     {favoritefetch && favoritefetch.map(({strDrink, strDrinkThumb, idDrink}) => {
                     return <SingleCocktailComponent key={idDrink} id={idDrink} image={strDrinkThumb} name={strDrink}/>;
                 })}

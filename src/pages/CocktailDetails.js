@@ -4,6 +4,8 @@ import {useParams} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar, faFileLines, faListCheck} from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import FavoriteAdder from "../components/FavoriteButtons/FavoriteAdder";
+import FavoriteRemover from "../components/FavoriteButtons/FavoriteRemover";
 
 function CocktailDetails() {
 
@@ -70,14 +72,13 @@ function CocktailDetails() {
                             <section>
                                 <div className={"cocktail-image-text"}>
                                     <h3>{strDrink}</h3>
-                                    <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
                                 </div>
                                 <img src={strDrinkThumb} alt={strDrink + " image"}/>
                             </section>
                             <section className="cocktail-description">
                                 <h3>
                                     Benodigdheden
-                                    <FontAwesomeIcon icon={faListCheck}></FontAwesomeIcon>
+                                    <FontAwesomeIcon icon={faListCheck} />
                                 </h3>
                                 <ul>
                                     <li>{strIngredient1} {strMeasure1}</li>
@@ -98,9 +99,16 @@ function CocktailDetails() {
                                 </ul>
                                 <h3>
                                     Beschrijving
-                                    <FontAwesomeIcon icon={faFileLines}></FontAwesomeIcon>
+                                    <FontAwesomeIcon icon={faFileLines} />
                                 </h3>
                                 <p>{strInstructions}</p>
+                                <h3>
+                                    <FontAwesomeIcon icon={faStar} />
+                                </h3>
+                                <div className={"favorite-buttons-detail-page"}>
+                                    <FavoriteAdder/>
+                                    <FavoriteRemover/>
+                                </div>
                             </section>
                         </div>
                     </div>

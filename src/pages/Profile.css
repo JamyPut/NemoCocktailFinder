@@ -1,3 +1,10 @@
 .profile-page-styling{
     background-color: var(--primary-background-color);
 }
+.favorite-component{
+    width: 60%;
+}
+.profile-container{
+    display: flex;
+    flex-direction: row;
+}

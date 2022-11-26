@@ -27,9 +27,9 @@ function App() {
                 <Route path={"/:cocktailid"} element={<CocktailDetails/>}/>
                 <Route path={"/register"} element={<Register/>}/>
                 {/*protected routes*/}
-                {/*<Route element={<RequireAuth/>}>*/}
+                <Route element={<RequireAuth/>}>
                     <Route path={"/profile"} element={<Profile/>}/>
-                {/*</Route>*/}
+                </Route>
             </Routes>
         </div>
     );
