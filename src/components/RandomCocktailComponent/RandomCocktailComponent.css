@@ -1,7 +1,8 @@
-:root{
+:root {
     --random-button-size: 20px;
 }
-.randomize-button{
+
+.randomize-button {
     background-color: var(--primary-button-color);
     border-radius: 25px;
     padding: 3px 20px 3px 20px;
@@ -11,7 +12,7 @@
     align-self: center;
 }
 
-.random-cocktail-button{
+.random-cocktail-button {
     margin: 10px 5px 10px 15px;
     font-size: var(--random-button-size);
     align-self: center;
@@ -19,21 +20,24 @@
     background-color: var(--primary-button-color);
     padding: 5px 0 5px 0;
 }
-.random-cocktail-button a{
+
+.random-cocktail-button a {
     padding: 0 20px 0 20px;
 
 }
-.svg-inline--fa{
+
+.svg-inline--fa {
     padding: 0 8px 0 0;
 }
-.random-cocktail-section{
+
+.random-cocktail-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 25px;
 }
 
-.random-cocktail-section img{
+.random-cocktail-section img {
     width: 300px;
     height: 300px;
     box-shadow: var(--primary-box-shadow);

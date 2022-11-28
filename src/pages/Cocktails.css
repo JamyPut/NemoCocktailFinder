@@ -1,27 +1,28 @@
-h1{
+h1 {
     text-align: center;
     /*color: var(--primary-text-color);*/
     font-size: 30px;
     text-shadow: var(--primary-box-shadow);
 }
 
-.cocktail-page-styling{
+.cocktail-page-styling {
     background-color: var(--primary-background-color);
 }
 
-.no-results-styling{
+.no-results-styling {
     margin: 300px;
     padding: 50px;
 }
 
-.cocktail-filters{
+.cocktail-filters {
     color: var(--primary-text-color);
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-top: 25px;
 }
-.cocktail-filters button{
+
+.cocktail-filters button {
     color: var(--primary-text-color);
     margin: 25px;
     padding: 8px;
@@ -30,7 +31,7 @@ h1{
     border-radius: 25px 0 0 25px;
 }
 
-.cocktail-filters input{
+.cocktail-filters input {
     border: solid 3px;
     border-color: var(--primary-button-color);
     background-color: var(--primary-background-color);
@@ -39,18 +40,18 @@ h1{
     height: 30px;
 }
 
-#submit-button{
+#submit-button {
     border-radius: 25px;
     padding: 2px 10px 2px 10px;
 }
 
-.search-form{
+.search-form {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.cocktail-list{
+.cocktail-list {
     display: flex;
     /*grid-template-columns: 200px 200px 200px 200px;*/
     flex-direction: row;

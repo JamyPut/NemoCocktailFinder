@@ -1,4 +1,4 @@
-.faq-page-styling{
+.faq-page-styling {
     background-color: var(--primary-background-color);
     display: flex;
     flex-direction: row;
@@ -6,11 +6,11 @@
     align-items: center;
 }
 
-.faq-page-styling h1{
+.faq-page-styling h1 {
     text-decoration: underline;
 }
 
-.question-section{
+.question-section {
     display: grid;
     grid-template-columns: 300px 300px 300px;
 }

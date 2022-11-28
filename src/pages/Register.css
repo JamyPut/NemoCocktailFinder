@@ -1,12 +1,14 @@
-.register-page-styling{
+.register-page-styling {
     background-color: var(--primary-background-color);
 }
-.register-form-section{
+
+.register-form-section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.register-form-section form{
+
+.register-form-section form {
     display: flex;
     flex-direction: column;
     background-color: var(--primary-button-color);
@@ -15,25 +17,27 @@
     color: var(--primary-text-color);
 }
 
-.register-form-section input{
+.register-form-section input {
     border: solid 3px transparent;
     border-radius: 10px;
     background-color: vaR(--primary-background-color);
     padding: 5px;
 }
-.register-form-section button{
+
+.register-form-section button {
     margin: 10px;
     border: solid 3px;
     border-color: var(--primary-background-color);
     border-radius: 10px;
     color: var(--primary-text-color);
 }
-.register-form-section button:disabled{
+
+.register-form-section button:disabled {
     position: absolute;
     left: -9999px;
 }
 
-.registration-help{
+.registration-help {
     border: solid black;
     color: black;
     margin: 3px;
@@ -44,13 +48,13 @@
     background-color: var(--primary-background-color);
 }
 
-.register-succes{
+.register-succes {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.register-succes #login-link{
+.register-succes #login-link {
     background-color: var(--primary-button-color);
     font-size: 24px;
     border-radius: 25px;
@@ -58,6 +62,7 @@
     margin-bottom: 5px;
     color: var(--primary-text-color);
 }
+
 .invisible {
     position: absolute;
     left: -9999px;
@@ -77,6 +82,6 @@
     margin-left: 0.25rem;
 }
 
-#login-link{
+#login-link {
     color: black;
 }

@@ -1,4 +1,4 @@
-.single-cocktail{
+.single-cocktail {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,13 +6,13 @@
     align-items: flex-start;
 }
 
-.single-cocktail img{
+.single-cocktail img {
     width: 300px;
     height: 300px;
     box-shadow: var(--primary-box-shadow);
 }
 
-.single-cocktail p{
+.single-cocktail p {
     text-shadow: var(--primary-box-shadow);
     background-color: var(--primary-button-color);
     color: var(--primary-text-color);
@@ -21,10 +21,11 @@
     margin: 5px;
 }
 
-.single-cocktail a:visited{
+.single-cocktail a:visited {
     color: var(--primary-button-color)
 }
-.single-cocktail-button{
+
+.single-cocktail-button {
     display: flex;
     flex-direction: row;
     align-items: center;

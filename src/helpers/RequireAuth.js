@@ -1,14 +1,14 @@
-import { useLocation, Navigate, Outlet } from "react-router-dom";
+import {Navigate, Outlet, useLocation} from "react-router-dom";
 import useAuth from "./useAuth";
 
 const RequireAuth = () => {
-    const { auth } = useAuth();
+    const {auth} = useAuth();
     const location = useLocation();
 
-    return(
+    return (
         auth?.username
-            ? <Outlet />
-            : <Navigate to={"/login"} state={{ from: location }} replace />
+            ? <Outlet/>
+            : <Navigate to={"/login"} state={{from: location}} replace/>
     );
 }
 

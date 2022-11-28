@@ -1,19 +1,22 @@
-.favorite-cocktail{
+.favorite-cocktail {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
 }
-.refresh-favorites{
+
+.refresh-favorites {
     background-color: var(--primary-button-color);
     border-radius: 25px;
     padding: 5px;
     margin-left: 10px;
 }
-.refresh-favorites:hover{
+
+.refresh-favorites:hover {
     background-color: var(--primary-background-color);
 }
-.favorite-title{
+
+.favorite-title {
     display: flex;
     flex-direction: row;
     margin: 2px 25px 2px 25px;

@@ -5,7 +5,7 @@ import RandomCocktailComponent from "../components/RandomCocktailComponent/Rando
 
 function Home() {
 
-    return(
+    return (
         <>
             <div className={"intro-container"}>
                 <div className={"nemo-title"}>

@@ -1,39 +1,44 @@
-.cocktail-details-page-styling{
+.cocktail-details-page-styling {
     background-color: var(--primary-background-color);
 }
 
-.cocktail{
+.cocktail {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 50px;
     font-size: 25px;
 }
-.cocktail img{
+
+.cocktail img {
     margin: 10px 0 10px 0;
     width: 75%;
 }
-.cocktail-image-text{
+
+.cocktail-image-text {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 75%;
 }
 
-.cocktail-description{
+.cocktail-description {
     width: 25%;
 }
 
-.svg-inline--fa{
+.svg-inline--fa {
     padding-left: 8px;
 }
-.fa-star{
+
+.fa-star {
     padding-left: 0;
 }
-.favorite-buttons-detail-page{
+
+.favorite-buttons-detail-page {
     display: flex;
     flex-direction: column;
 }
-.favorite-buttons-detail-page button{
+
+.favorite-buttons-detail-page button {
     align-self: flex-start;
 }

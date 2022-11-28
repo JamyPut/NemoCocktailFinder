@@ -1,6 +1,6 @@
 import './App.css';
 import {Route, Routes} from "react-router-dom";
-import React, {useEffect} from 'react';
+import React from 'react';
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home"
 import Faq from "./pages/Faq";

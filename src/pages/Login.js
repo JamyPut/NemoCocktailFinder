@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "./Login.css"
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import axios from "axios";
 import useAuth from "../helpers/useAuth";
 
@@ -27,9 +27,9 @@ const Login = () => {
         try {
             const response = await axios.post(serverUrl, JSON.stringify({username, password: pass}),
                 {
-                    headers: {"Content-Type": "application/json" },
+                    headers: {"Content-Type": "application/json"},
                 }
-                );
+            );
             console.log(response.data)
             const accesToken = response?.data?.accesToken;
             const roles = response?.data?.roles;
@@ -39,19 +39,19 @@ const Login = () => {
             setUsername("");
             setPass("");
             navigate(from, {replace: true});
-        } catch (error){
-            if (!error?.response){
+        } catch (error) {
+            if (!error?.response) {
                 setErrorMessage("No response from server");
             } else if (error.response?.status === 401) {
                 console.log(error.response)
                 setErrorMessage("Verkeerde gebruikersnaam of wachtwoord");
             } else {
-                setErrorMessage("Login mislukt")
+                setErrorMessage("Login mislukt");
             }
         }
     }
 
-    return(
+    return (
         <div className={"login-page-styling"}>
             <h1>Login voor toegang tot extra content.</h1>
             <section className={"login-form-section"}>
@@ -81,7 +81,7 @@ const Login = () => {
                     <button>Inloggen</button>
                 </form>
                 <hr className={"rounded"}/>
-                <Link to={"/register"}>Nog geen account? klik hier om je te registreren</Link>
+                <Link id={"register-link"} to={"/register"}>Nog geen account? klik hier om je te registreren</Link>
             </section>
         </div>
     );

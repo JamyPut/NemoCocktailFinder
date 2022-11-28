@@ -4,7 +4,7 @@ import './NavBar.css';
 import {ReactComponent as CocktailLogo} from "../../assets/cocktail-logo.svg";
 
 function NavBar() {
-    return(
+    return (
         <>
             <nav className={"navigation-bar"}>
                 <ul className={"navigation-container"}>

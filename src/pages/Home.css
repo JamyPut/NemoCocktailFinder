@@ -1,14 +1,16 @@
-*{
+* {
     border: none;
     background: none;
 }
-.intro-container{
+
+.intro-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.nemo-title{
+
+.nemo-title {
     font-size: 30px;
     color: white;
     text-align: center;
@@ -17,7 +19,7 @@
     margin-top: 75px;
 }
 
-.all-cocktails-button{
+.all-cocktails-button {
     background: rgba(238, 221, 192, 0.7);
     border-radius: 50px;
     font-size: 32px;
@@ -26,11 +28,12 @@
     padding: 10px 20px 10px 20px;
     margin-top: 20px;
 }
-.all-cocktails-button a{
+
+.all-cocktails-button a {
     color: black;
 }
 
-.random-section-container{
+.random-section-container {
     display: flex;
     flex-direction: row;
     justify-content: center;

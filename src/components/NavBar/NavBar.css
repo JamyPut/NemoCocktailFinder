@@ -1,20 +1,21 @@
-:root{
+:root {
     --navbar-background-color: rgba(238, 221, 191, 0.25);
 }
-.navigation-bar{
+
+.navigation-bar {
     background-color: var(--navbar-background-color);
     max-height: 90px;
     position: relative;
 }
 
-.navigation-container{
+.navigation-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.navigation-item{
+.navigation-item {
     margin: 5px 30px 5px 30px;
     padding: 5px 25px 5px 25px;
     font-size: 24px;
@@ -23,15 +24,16 @@
     color: var(--primary-text-color);
 }
 
-.cocktail-logo{
+.cocktail-logo {
     width: 60px;
     height: 80px;
 }
-#cocktail-logo{
+
+#cocktail-logo {
     background: none;
 }
 
-.logreg-button{
+.logreg-button {
     position: absolute;
     top: 90px;
     right: 0;

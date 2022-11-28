@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import "./CocktailDetails.css"
 import {useParams} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faStar, faFileLines, faListCheck} from "@fortawesome/free-solid-svg-icons";
+import {faFileLines, faListCheck, faStar} from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import FavoriteAdder from "../components/FavoriteButtons/FavoriteAdder";
 import FavoriteRemover from "../components/FavoriteButtons/FavoriteRemover";
@@ -78,7 +78,7 @@ function CocktailDetails() {
                             <section className="cocktail-description">
                                 <h3>
                                     Benodigdheden
-                                    <FontAwesomeIcon icon={faListCheck} />
+                                    <FontAwesomeIcon icon={faListCheck}/>
                                 </h3>
                                 <ul>
                                     <li>{strIngredient1} {strMeasure1}</li>
@@ -99,11 +99,11 @@ function CocktailDetails() {
                                 </ul>
                                 <h3>
                                     Beschrijving
-                                    <FontAwesomeIcon icon={faFileLines} />
+                                    <FontAwesomeIcon icon={faFileLines}/>
                                 </h3>
                                 <p>{strInstructions}</p>
                                 <h3>
-                                    <FontAwesomeIcon icon={faStar} />
+                                    <FontAwesomeIcon icon={faStar}/>
                                 </h3>
                                 <div className={"favorite-buttons-detail-page"}>
                                     <FavoriteAdder/>

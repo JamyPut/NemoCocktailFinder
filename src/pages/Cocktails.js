@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import "./Cocktails.css";
 import SingleCocktailComponent from "../components/SingleCocktailComponent/SingleCocktailComponent";
 import axios from "axios";
