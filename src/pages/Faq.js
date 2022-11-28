@@ -20,8 +20,7 @@ function Faq() {
                 />
                 <FaQuestion
                     title={"Kan ik mijn lijsten bewaren voor een later bezoek aan de website?"}
-                    answer={"Momenteel is het niet mogelijk lijsten te bewaren. " +
-                        "De lijst blijft bewaard totdat het tabblad gesloten word."}
+                    answer={"De lijst blijft bewaard totdat je browsercookies gewist worden."}
                 />
                 <FaQuestion
                     title={"Waar kan ik mijn favorieten vinden?"}
