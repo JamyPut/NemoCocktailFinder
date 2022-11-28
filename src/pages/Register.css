@@ -29,6 +29,54 @@
     color: var(--primary-text-color);
 }
 .register-form-section button:disabled{
-    border: transparent;
-    color: grey;
+    position: absolute;
+    left: -9999px;
+}
+
+.registration-help{
+    border: solid black;
+    color: black;
+    margin: 3px;
+    padding: 8px;
+    border-radius: 25px;
+    inline-size: 200px;
+    text-wrap: normal;
+    background-color: var(--primary-background-color);
+}
+
+.register-succes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-succes #login-link{
+    background-color: var(--primary-button-color);
+    font-size: 24px;
+    border-radius: 25px;
+    padding: 8px;
+    margin-bottom: 5px;
+    color: var(--primary-text-color);
+}
+.invisible {
+    position: absolute;
+    left: -9999px;
+}
+
+.hidden {
+    display: none;
+}
+
+.valid {
+    color: green;
+    margin-left: 0.25rem;
+}
+
+.invalid {
+    color: red;
+    margin-left: 0.25rem;
+}
+
+#login-link{
+    color: black;
 }

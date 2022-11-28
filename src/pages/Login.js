@@ -53,7 +53,7 @@ const Login = () => {
 
     return(
         <div className={"login-page-styling"}>
-            <h1>Login voor toegang tot de profiel pagina.</h1>
+            <h1>Login voor toegang tot extra content.</h1>
             <section className={"login-form-section"}>
                 <p>{errorMessage}</p>
                 <form onSubmit={loginUser}>
