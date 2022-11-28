@@ -5,3 +5,6 @@
     padding: 3px 6px 3px 6px;
     color: var(--primary-text-color);
 }
+.fa-star{
+    margin-left: 5px;
+}
