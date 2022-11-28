@@ -6,6 +6,11 @@
     align-items: center;
 }
 
+#faq-title{
+    align-self: flex-start;
+    margin-top: 50px;
+}
+
 .faq-page-styling h1 {
     text-decoration: underline;
 }
